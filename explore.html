@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explore | Skillfolio</title>
+
+  <!-- Reuse the styling from the homepage -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Styling specifically for Explore -->
+  <link rel="stylesheet" href="explore.css">
+
+  <!-- JavaScript for Explore -->
+  <script src="explore.js" defer></script>
+</head>
+
+<body>
+  <div class="explore-app">
+
+    <!-- Sidebar navigation -->
+    <aside class="explore-sidebar">
+      <a href="index.html" class="explore-brand">
+        Skillfolio<span>.</span>
+      </a>
+
+      <nav class="explore-nav" aria-label="Main navigation">
+        <a href="home.html" class="explore-nav-link">
+          <span>⌂</span> Home
+        </a>
+
+        <a href="explore.html"
+           class="explore-nav-link active"
+           aria-current="page">
+          <span>⌕</span> Explore
+        </a>
+
+        <a href="create-post.html" class="explore-nav-link">
+          <span>＋</span> Create Post
+        </a>
+
+        <a href="notifications.html"class="explore-nav-link">
+          <span>♡</span> Notifications
+        </a>
+
+        <a href="profile.html" class="explore-nav-link">
+          <span>◉</span> My Profile
+        </a>
+      </nav>
+
+      <div class="explore-sidebar-footer">
+        <p>Your skills.</p>
+        <p>Your work.</p>
+        <p>Your future.</p>
+      </div>
+    </aside>
+
+    <!-- Main Explore content -->
+    <main class="explore-main">
+
+      <header class="explore-header">
+        <div>
+          <p class="explore-eyebrow">YOUR NEXT DISCOVERY</p>
+          <h1>Explore<span>.</span></h1>
+          <p class="explore-subtitle">
+            Discover skills, ideas, and creators worth following.
+          </p>
+        </div>
+
+        <a href="index.html" class="explore-home-link">
+          Back to Home
+        </a>
+      </header>
+
+      <!-- Search -->
+      <form class="explore-search" id="explore-search-form">
+        <span aria-hidden="true">⌕</span>
+
+        <input
+          type="search"
+          id="explore-search-input"
+          placeholder="Search projects, creators, or skills..."
+          aria-label="Search projects, creators, or skills"
+        >
+
+        <button type="submit">Search</button>
+      </form>
+
+      <!-- Skill categories -->
+      <section class="explore-section">
+        <div class="explore-section-heading">
+          <div>
+            <h2>Explore by skill</h2>
+            <p>Find work that inspires you.</p>
+          </div>
+        </div>
+
+        <div class="explore-categories" id="explore-categories">
+          <button class="explore-category active"
+                  type="button"
+                  data-category="All"
+                  aria-pressed="true">
+            All skills
+          </button>
+
+          <button class="explore-category"
+                  type="button"
+                  data-category="Design"
+                  aria-pressed="false">
+            Design
+          </button>
+
+          <button class="explore-category"
+                  type="button"
+                  data-category="Development"
+                  aria-pressed="false">
+            Development
+          </button>
+
+          <button class="explore-category"
+                  type="button"
+                  data-category="Photography"
+                  aria-pressed="false">
+            Photography
+          </button>
+
+          <button class="explore-category"
+                  type="button"
+                  data-category="Fashion"
+                  aria-pressed="false">
+            Fashion
+          </button>
+
+          <button class="explore-category"
+                  type="button"
+                  data-category="Music"
+                  aria-pressed="false">
+            Music
+          </button>
+        </div>
+      </section>
+
+      <!-- Discover project cards -->
+      <section class="explore-section">
+        <div class="explore-section-heading">
+          <div>
+            <h2>Discover projects</h2>
+            <p>Creative work from our sample community.</p>
+          </div>
+
+          <span class="explore-results-count"
+                id="explore-results-count">
+            0 projects
+          </span>
+        </div>
+
+        <div class="explore-project-grid" id="explore-project-grid">
+          <!-- JavaScript will add project cards here. -->
+        </div>
+
+        <div class="explore-empty-state"
+             id="explore-empty-state"
+             hidden>
+          <h3>No projects found</h3>
+          <p>Try another search or choose a different skill.</p>
+        </div>
+      </section>
+
+      <footer class="explore-footer">
+        <p>Skillfolio — Showcase what makes you different.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Mobile navigation -->
+  <nav class="explore-mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="explore.html" aria-current="page">Explore</a>
+    <a href="index.html#feed-grid">Create</a>
+    <a href="index.html">Profile</a>
+  </nav>
+
+</body>
+</html>

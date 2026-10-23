@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100F16">
+  <title>Create Post | Skillfolio</title>
+
+  <!-- Shared website styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Create Post page styling -->
+  <link rel="stylesheet" href="create-post.css">
+
+  <script src="create-post.js" defer></script>
+</head>
+<body>
+  <div class="create-post-app">
+
+    <aside class="create-post-sidebar">
+      <a class="create-post-logo" href="index.html">
+        <span class="logo-symbol">S</span>
+        <span>Skillfolio</span>
+      </a>
+
+      <nav class="create-post-navigation" aria-label="Main navigation">
+        <a href="home.html">
+          <span>⌂</span> Home
+        </a>
+        <a href="explore.html">
+          <span>⌕</span> Explore
+        </a>
+        <a href="create-post.html" class="active"
+           aria-current="page">
+          <span>＋</span> Create Post
+        </a>
+        <a href="notifications.html">
+          <span>♧</span> Notifications
+        </a>
+        <a href="profile.html">
+          <span>◉</span> My Profile
+        </a>
+      </nav>
+
+      <div class="create-post-sidebar-note">
+        <p>Your skills.</p>
+        <p>Your work.</p>
+        <p class="purple-text">Your future.</p>
+      </div>
+    </aside>
+
+    <main class="create-post-main">
+      <header class="create-post-header">
+        <div>
+          <p class="page-eyebrow">SHOW THE WORLD WHAT YOU DO</p>
+          <h1>Create a post</h1>
+          <p class="page-subtitle">
+            Share your skills, ideas, and latest work.
+          </p>
+        </div>
+        <a href="profile.html" class="profile-shortcut">
+          View profile ↗
+        </a>
+      </header>
+
+      <div class="create-post-layout">
+
+        <section class="post-editor-panel">
+          <form id="create-post-form">
+
+            <div class="editor-section">
+              <label class="editor-label" for="post-media">
+                01. Add your media
+              </label>
+              <p class="editor-help">
+                Choose one image or video from your computer.
+              </p>
+
+              <label class="media-upload-area" for="post-media"
+                     id="media-upload-area">
+                <span class="upload-icon">↑</span>
+                <strong>Click to upload your work</strong>
+                <span>Images or videos · One file per post</span>
+              </label>
+
+              <input
+                type="file"
+                id="post-media"
+                accept="image/*,video/*"
+                hidden
+              >
+
+              <div id="media-preview" class="media-preview"
+                   hidden>
+                <img id="preview-image" alt="Selected media preview"
+                     hidden>
+                <video id="preview-video" controls hidden></video>
+                <button type="button" id="remove-media"
+                        class="remove-media-button">
+                  Remove media
+                </button>
+              </div>
+            </div>
+
+            <div class="editor-section">
+              <div class="label-row">
+                <label class="editor-label" for="post-caption">
+                  02. Write a caption
+                </label>
+                <span id="caption-count">0 / 500</span>
+              </div>
+
+              <textarea
+                id="post-caption"
+                maxlength="500"
+                rows="5"
+                placeholder="What are you working on? Share the story behind your work..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="editor-section">
+              <label class="editor-label" for="post-category">
+                03. Choose a skill category
+              </label>
+
+              <select id="post-category" required>
+                <option value="">Select a category</option>
+                <option value="Design">Design</option>
+                <option value="Development">Development</option>
+                <option value="Photography">Photography</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Music">Music</option>
+              </select>
+            </div>
+
+            <p id="form-message" class="form-message"
+               role="status" aria-live="polite"></p>
+
+            <div class="editor-actions">
+              <button type="button" id="preview-post-button"
+                      class="secondary-button">
+                Preview post
+              </button>
+              <button type="submit" class="publish-button">
+                Publish post ↗
+              </button>
+            </div>
+
+          </form>
+        </section>
+
+        <aside class="post-preview-panel">
+          <div class="preview-heading">
+            <span class="preview-status-dot"></span>
+            LIVE PREVIEW
+          </div>
+
+          <article class="preview-post-card">
+            <div class="preview-author">
+              <div class="preview-avatar">S</div>
+              <div>
+                <strong>Skillfolio Creator</strong>
+                <p>@your.username</p>
+              </div>
+            </div>
+
+            <div class="preview-media-placeholder"
+                 id="preview-card-media">
+              <span>Your work will appear here</span>
+            </div>
+
+            <div class="preview-post-details">
+              <span id="preview-card-category"
+                    class="preview-category">
+                Select a category
+              </span>
+              <p id="preview-card-caption">
+                Your caption will appear here as you type.
+              </p>
+            </div>
+
+            <div class="preview-post-actions">
+              <span>♡ Like</span>
+              <span>▢ Comment</span>
+              <span>↗ Share</span>
+            </div>
+          </article>
+
+          <p class="preview-disclaimer">
+            This is a preview. Your post is not public yet.
+          </p>
+        </aside>
+
+      </div>
+    </main>
+  </div>
+
+  <nav class="create-post-mobile-nav"
+       aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="create-post.html" aria-current="page">＋ Create</a>
+    <a href="profile.html">Profile</a>
+  </nav>
+</body>
+</html>

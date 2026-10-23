@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="Create your Skillfolio account and showcase your skills.">
+
+  <title>Create Account | Skillfolio</title>
+
+  <link rel="stylesheet" href="signup.css">
+  <script src="signup.js" defer></script>
+</head>
+<body>
+  <header class="signup-header">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">S</span>
+      <span>Skillfolio<span class="brand-dot">.</span></span>
+    </a>
+
+    <a href="index.html" class="back-link">← Back to welcome</a>
+  </header>
+
+  <main class="signup-layout">
+    <section class="signup-intro">
+      <span class="eyebrow">YOUR JOURNEY STARTS HERE</span>
+
+      <h1>
+        Your skills.<br>
+        Your work.<br>
+        <span class="gradient-text">Your future.</span>
+      </h1>
+
+      <p>
+        Join a community where you can share what you create,
+        showcase your projects, and grow alongside other creators.
+      </p>
+
+      <div class="intro-points">
+        <div><span class="check-icon">✓</span> Showcase your skills and projects</div>
+        <div><span class="check-icon">✓</span> Discover and follow creators</div>
+        <div><span class="check-icon">✓</span> Build your creative portfolio</div>
+      </div>
+    </section>
+
+    <section class="signup-card">
+      <div class="form-heading">
+        <span class="eyebrow">JOIN SKILLFOLIO</span>
+        <h2>Create your account</h2>
+        <p>Enter your details to get started.</p>
+      </div>
+
+      <form id="signup-form">
+        <div class="form-field">
+          <label for="full-name">Full name</label>
+          <input
+            id="full-name"
+            name="fullName"
+            type="text"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            minlength="2"
+            maxlength="80"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="username">Username</label>
+          <div class="input-with-prefix">
+            <span>@</span>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="yourusername"
+              autocomplete="username"
+              minlength="3"
+              maxlength="20"
+              pattern="[A-Za-z0-9_]+"
+              title="Use letters, numbers, and underscores only."
+              required
+            >
+          </div>
+          <small>Use letters, numbers, or underscores.</small>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="At least 8 characters"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            id="confirm-password"
+            name="confirmPassword"
+            type="password"
+            placeholder="Enter your password again"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+        </div>
+
+        <label class="terms-row">
+          <input id="terms" name="terms" type="checkbox" required>
+          <span>
+            I agree to the
+            <a href="#terms-note">terms of use</a>
+            and understand the privacy information.
+          </span>
+        </label>
+
+        <button class="signup-button" type="submit">
+          Create account <span aria-hidden="true">→</span>
+        </button>
+
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="login-prompt">
+        Already have an account?
+        <a href="login.html">Log in</a>
+      </div>
+
+      <p class="terms-note" id="terms-note">
+        Account creation and authentication will be connected in a later
+        step. This page currently demonstrates the form only.
+      </p>
+    </section>
+  </main>
+
+  <footer class="signup-footer">
+    <a href="index.html">Skillfolio.</a>
+    <span>Your skills. Your work. Your future.</span>
+  </footer>
+</body>
+</html>

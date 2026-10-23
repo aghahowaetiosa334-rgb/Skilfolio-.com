@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b12">
+  <title>Edit Profile | Skillfolio</title>
+  <link rel="stylesheet" href="edit-profile.css">
+  <script src="edit-profile.js" defer></script>
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <header class="top-navbar">
+    <a href="index.html" class="brand">Skillfolio</a>
+
+    <div class="navbar-actions">
+      <a href="notifications.html" class="navbar-icon" aria-label="Notifications" title="Notifications">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+          <path d="M10 21h4"/>
+        </svg>
+      </a>
+
+      <a href="profile.html" class="navbar-avatar" aria-label="My profile" title="My profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21a8 8 0 0 1 16 0"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <p class="sidebar-heading">MENU</p>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">
+          <span class="nav-icon">⌂</span>
+          <span>Home</span>
+        </a>
+
+        <a href="explore.html" class="nav-link">
+          <span class="nav-icon">◈</span>
+          <span>Explore</span>
+        </a>
+
+        <a href="search.html" class="nav-link">
+          <span class="nav-icon">⌕</span>
+          <span>Search</span>
+        </a>
+
+        <a href="create-post.html" class="nav-link">
+          <span class="nav-icon">＋</span>
+          <span>Create Post</span>
+        </a>
+
+        <a href="notifications.html" class="nav-link">
+          <span class="nav-icon">♧</span>
+          <span>Notifications</span>
+        </a>
+
+        <a href="profile.html" class="nav-link">
+          <span class="nav-icon">♙</span>
+          <span>My Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <span class="nav-icon">⚙</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="footer-dot"></span>
+        <span>Build your future</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">YOUR ACCOUNT</p>
+          <h1>Edit Profile</h1>
+          <p class="page-description">
+            Update your information and show the community who you are.
+          </p>
+        </div>
+
+        <a href="profile.html" class="back-link">← Back to profile</a>
+      </div>
+
+      <form id="editProfileForm" class="profile-form">
+
+        <!-- PROFILE PHOTO -->
+        <section class="photo-section">
+          <div class="avatar-preview" id="avatarPreview">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21a8 8 0 0 1 16 0"/>
+            </svg>
+          </div>
+
+          <div class="photo-details">
+            <h2>Profile picture</h2>
+            <p>Choose a picture that represents you.</p>
+
+            <label for="profilePicture" class="upload-button">
+              Choose image
+            </label>
+
+            <input
+              type="file"
+              id="profilePicture"
+              accept="image/*"
+              hidden
+            >
+
+            <p class="field-hint">Image files only, up to 1 MB.</p>
+          </div>
+        </section>
+
+        <!-- FULL NAME -->
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            maxlength="60"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <!-- USERNAME -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="username-field">
+            <span>@</span>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="yourusername"
+              maxlength="30"
+              autocomplete="username"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- BIO -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="bio">Bio</label>
+            <span id="bioCount">0/200</span>
+          </div>
+
+          <textarea
+            id="bio"
+            name="bio"
+            rows="4"
+            maxlength="200"
+            placeholder="Tell people about yourself, your interests, and what you do..."
+          ></textarea>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <input
+            type="text"
+            id="skills"
+            name="skills"
+            maxlength="300"
+            placeholder="Web development, design, photography..."
+          >
+          <p class="field-hint">Separate each skill with a comma.</p>
+        </div>
+
+        <!-- FORM ACTIONS -->
+        <div class="form-actions">
+          <a href="profile.html" class="cancel-button">Cancel</a>
+          <button type="submit" class="save-button">Save changes</button>
+        </div>
+
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+
+      </form>
+
+      <p class="privacy-note">
+        Your changes are saved in this browser for this demo.
+      </p>
+
+    </main>
+  </div>
+
+</body>
+</html>

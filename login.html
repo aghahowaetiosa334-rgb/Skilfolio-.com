@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In | Skillfolio</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="login-container">
+    <a href="index.html" class="brand">Skillfolio<span>.</span></a>
+
+    <section class="login-card">
+      <div class="logo-icon">S</div>
+
+      <h1>Welcome back</h1>
+      <p class="subtitle">Log in to continue your journey.</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <div class="form-options">
+          <label class="remember-option">
+            <input type="checkbox" id="remember">
+            Remember me
+          </label>
+          <a href="#" id="forgot-password">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-button">
+          Log In <span aria-hidden="true">→</span>
+        </button>
+
+        <p id="login-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="signup-prompt">
+        Don't have an account?
+        <a href="signup.html">Create an account</a>
+      </p>
+    </section>
+
+    <p class="footer-text">
+      Your skills. Your work. Your future.
+    </p>
+  </main>
+</body>
+</html>

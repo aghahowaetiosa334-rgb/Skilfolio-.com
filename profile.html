@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Profile | Skillfolio</title>
+
+  <!-- Reuse existing website styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Profile-specific styles -->
+  <link rel="stylesheet" href="profile.css">
+
+  <!-- Profile interactions -->
+  <script src="profile.js" defer></script>
+</head>
+
+<body>
+  <div class="profile-app">
+
+    <!-- Sidebar -->
+    <aside class="profile-sidebar">
+      <a href="index.html" class="profile-brand">
+        Skillfolio<span>.</span>
+      </a>
+
+      <nav class="profile-nav" aria-label="Main navigation">
+        <a href="home.html" class="profile-nav-link">
+          <span>⌂</span> Home
+        </a>
+
+        <a href="explore.html" class="profile-nav-link">
+          <span>⌕</span> Explore
+        </a>
+
+        <a href="create-post.html" class="profile-nav-link">
+          <span>＋</span> Create Post
+        </a>
+
+        <a href="notifications.html" class="profile-nav-link">
+          <span>♡</span> Notifications
+        </a>
+
+        <a href="profile.html"
+           class="profile-nav-link active"
+           aria-current="page">
+          <span>◉</span> My Profile
+        </a>
+      </nav>
+
+      <div class="profile-sidebar-footer">
+        <p>Your skills.</p>
+        <p>Your work.</p>
+        <p>Your future.</p>
+      </div>
+    </aside>
+
+    <!-- Main profile content -->
+    <main class="profile-main">
+
+      <header class="profile-page-header">
+        <div>
+          <p class="profile-eyebrow">YOUR CREATIVE SPACE</p>
+          <h1>My Profile<span>.</span></h1>
+        </div>
+
+        <a href="home.html" class="profile-home-link">
+          Back to Home
+        </a>
+      </header>
+
+      <!-- Creator information -->
+      <section class="creator-profile-card">
+
+        <div class="creator-cover">
+          <span class="cover-label">CREATIVE MINDSET</span>
+        </div>
+
+        <div class="creator-profile-content">
+
+          <div class="creator-avatar-wrap">
+            <img
+              class="creator-avatar"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=85"
+              alt="Sample creator profile"
+            >
+          </div>
+
+          <div class="creator-actions">
+            <button
+              class="profile-edit-button"
+              class="edit-profile-button"
+              type="button"
+            >
+           <a href="edit-profile.html">Edit Profile</a>
+            </button>
+          </div>
+
+          <div class="creator-identity">
+            <h2 id="creator-name">Amara Okafor</h2>
+            <p class="creator-username">@amara.creates</p>
+
+            <p class="creator-bio" id="creator-bio">
+              Designer and creative thinker passionate about
+              building meaningful digital experiences.
+              Learning, creating, and sharing my journey.
+            </p>
+          </div>
+
+          <div class="creator-stats">
+            <div class="creator-stat">
+              <strong id="post-count">6</strong>
+              <span>Posts</span>
+            </div>
+
+            <div class="creator-stat">
+              <strong>248</strong>
+              <span>Followers</span>
+            </div>
+
+            <div class="creator-stat">
+              <strong>180</strong>
+              <span>Following</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="profile-section">
+        <div class="profile-section-heading">
+          <div>
+            <h2>My Skills</h2>
+            <p>What I can do and what I'm learning.</p>
+          </div>
+        </div>
+
+        <div class="profile-skills" id="profile-skills">
+          <span class="profile-skill">UI/UX Design</span>
+          <span class="profile-skill">Graphic Design</span>
+          <span class="profile-skill">Branding</span>
+          <span class="profile-skill">HTML</span>
+          <span class="profile-skill">CSS</span>
+        </div>
+      </section>
+
+      <!-- Posts and portfolio -->
+      <section class="profile-section">
+
+        <div class="profile-section-heading">
+          <div>
+            <h2>My Work</h2>
+            <p>Explore my posts and completed projects.</p>
+          </div>
+        </div>
+
+        <div class="profile-tabs" role="tablist"
+             aria-label="Profile content">
+
+          <button
+            class="profile-tab active"
+            id="posts-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="profile-content"
+            data-tab="posts"
+          >
+            My Posts
+          </button>
+
+          <button
+            class="profile-tab"
+            id="portfolio-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="profile-content"
+            data-tab="portfolio"
+          >
+            Portfolio
+          </button>
+
+        </div>
+
+        <div
+          class="profile-project-grid"
+          id="profile-content"
+          role="tabpanel"
+          aria-labelledby="posts-tab"
+        >
+          <!-- JavaScript inserts posts and projects here. -->
+        </div>
+
+        <div class="profile-empty-state"
+             id="profile-empty-state"
+             hidden>
+          <h3>Nothing here yet</h3>
+          <p>Your work will appear here.</p>
+        </div>
+
+      </section>
+
+      <footer class="profile-footer">
+        <p>Skillfolio — Showcase what makes you different.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Mobile navigation -->
+  <nav class="profile-mobile-nav" aria-label="Mobile navigation">
+    <a href="home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="index.html#feed-grid">Create</a>
+    <a href="profile.html" aria-current="page">Profile</a>
+  </nav>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100F16">
+  <title>Notifications | Skillfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="notifications.css">
+  <script src="notifications.js" defer></script>
+</head>
+<body>
+  <div class="notifications-app">
+
+    <aside class="notifications-sidebar">
+      <a href="index.html" class="notifications-logo">
+        <span class="notifications-logo-symbol">S</span>
+        <span>Skillfolio</span>
+      </a>
+
+      <nav class="notifications-navigation" aria-label="Main navigation">
+        <a href="home.html"><span>⌂</span> Home</a>
+        <a href="explore.html"><span>⌕</span> Explore</a>
+        <a href="create-post.html"><span>＋</span> Create Post</a>
+        <a href="notifications.html" class="active"
+           aria-current="page">
+          <span>♧</span> Notifications
+          <span id="sidebar-unread-count" class="nav-unread-count">3</span>
+        </a>
+        <a href="profile.html"><span>◉</span> My Profile</a>
+      </nav>
+
+      <div class="notifications-sidebar-note">
+        <p>Your skills.</p>
+        <p>Your work.</p>
+        <p class="notifications-purple-text">Your future.</p>
+      </div>
+    </aside>
+
+    <main class="notifications-main">
+      <header class="notifications-header">
+        <div>
+          <p class="notifications-eyebrow">STAY IN THE LOOP</p>
+          <h1>Notifications</h1>
+          <p class="notifications-subtitle">
+            See what's happening with your work and community.
+          </p>
+        </div>
+
+        <button type="button" id="mark-all-read"
+                class="mark-all-button">
+          Mark all as read
+        </button>
+      </header>
+
+      <section class="notifications-panel">
+        <div class="notifications-toolbar">
+          <div class="notification-tabs" role="group"
+               aria-label="Filter notifications">
+            <button type="button" class="notification-tab active"
+                    data-filter="all" aria-pressed="true">
+              All
+            </button>
+            <button type="button" class="notification-tab"
+                    data-filter="unread" aria-pressed="false">
+              Unread
+              <span id="unread-tab-count" class="unread-tab-count">3</span>
+            </button>
+          </div>
+
+          <span id="notifications-summary"
+                class="notifications-summary">
+            5 notifications
+          </span>
+        </div>
+
+        <div class="notification-date-heading">RECENT</div>
+
+        <div id="notifications-list" class="notifications-list"
+             aria-live="polite"></div>
+
+        <div id="notifications-empty" class="notifications-empty" hidden>
+          <div class="empty-notification-icon">♧</div>
+          <h2>You're all caught up!</h2>
+          <p>There are no notifications to show here right now.</p>
+        </div>
+      </section>
+
+      <p class="notifications-demo-note">
+        These are sample notifications for the Skillfolio frontend demo.
+      </p>
+    </main>
+  </div>
+
+  <nav class="notifications-mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="create-post.html">＋ Create</a>
+    <a href="notifications.html" aria-current="page">Activity</a>
+    <a href="profile.html">Profile</a>
+  </nav>
+</body>
+</html>
